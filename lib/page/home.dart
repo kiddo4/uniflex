@@ -28,48 +28,49 @@ class _HomePageState extends State<HomePage> {
         top: false,
         child: Scaffold(
           extendBody: true,
-          appBar: AppBar(
+          // appBar: AppBar(
             
-            elevation: 0,
-            backgroundColor: Colors.transparent,
-            leading: const Row(
-              children: [
-                SizedBox(width: 5,),
-                CircleAvatar(
-                  backgroundImage: AssetImage(Assets.pfp),
-                  backgroundColor: Colors.transparent,
-                ),
+          //   elevation: 0,
+          //   backgroundColor: Colors.transparent,
+          //   leading: const Row(
+          //     children: [
+          //       SizedBox(width: 5,),
+          //       CircleAvatar(
+          //         backgroundImage: AssetImage(Assets.pfp),
+          //         backgroundColor: Colors.transparent,
+          //       ),
 
-              ],
-            ),
-            title: const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                 Text(
-                  'Welcome back!',
-                  style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromRGBO(57, 55, 96, 1)
-                              ),
-                  ),
-                  Text(
-                        "Adewale Psalmzy",
-                        style: TextStyle(
-                          color: Color.fromRGBO(26, 28, 30, 1),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w800,
-                        )
-                    )
-              ],
-            ),
-            actions: const [
-              Icon(
-                Icons.notifications,
-                color: Colors.black,
-                )
-            ],
-          ),
+          //     ],
+          //   ),
+          //   title: const Column(
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     children: [
+          //        Text(
+          //         'Welcome back!',
+          //         style: TextStyle(
+          //                         fontSize: 14,
+          //                         fontWeight: FontWeight.w400,
+          //                         color: Color.fromRGBO(57, 55, 96, 1)
+          //                     ),
+          //         ),
+          //         Text(
+          //               "Adewale Psalmzy",
+          //               style: TextStyle(
+          //                 color: Color.fromRGBO(26, 28, 30, 1),
+          //                   fontSize: 18,
+          //                   fontWeight: FontWeight.w800,
+          //               )
+          //           )
+          //     ],
+          //   ),
+          //   actions: const [
+          //     Icon(
+          //       Icons.notifications,
+          //       color: Colors.black,
+          //       )
+          //   ],
+          // ),
+          
           bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
               iconTheme: const IconThemeData(color: Colors.grey)
