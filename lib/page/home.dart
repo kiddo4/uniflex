@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uniflex/ui/assets.dart';
 
 class HomePage extends StatefulWidget {
@@ -70,14 +71,14 @@ class _HomePageState extends State<HomePage> {
           //       )
           //   ],
           // ),
-          body: const Column(
+          body: Column(
             children: [
               SizedBox(
                 child: ListTile(
-                  leading: CircleAvatar(
+                  leading: const CircleAvatar(
                     backgroundImage: AssetImage(Assets.pfp),
                   ),
-                  title: Text(
+                  title: const Text(
                   'Welcome back!',
                   style: TextStyle(
                                   fontSize: 14,
@@ -85,14 +86,44 @@ class _HomePageState extends State<HomePage> {
                                   color: Color.fromRGBO(57, 55, 96, 1)
                               ),
                   ),
-                  subtitle: Text(
+                  subtitle: const Text(
                         "Adewale Psalmzy",
                         style: TextStyle(
                           color: Color.fromRGBO(26, 28, 30, 1),
                             fontSize: 18,
                             fontWeight: FontWeight.w800,
                         )
-                    )
+                    ),
+                  trailing: SvgPicture.asset(Assets.notification),
+                ),
+              ),
+              const SizedBox(height: 20,),
+              Container(
+
+              ),
+              const SizedBox(height: 20,),
+              const SizedBox(
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                        "My Savings Plans",
+                        style: TextStyle(
+                          color: Color.fromRGBO(26, 28, 30, 1),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w800,
+                        )
+                    ),
+                    Icon(
+                      Icons.arrow_forward_sharp,
+                      color: Color.fromRGBO(26, 28, 30,1)
+                      )
+                      ],
+                    ),
+                    SizedBox(height: 10,)
+                  ],
                 ),
               )
             ],
