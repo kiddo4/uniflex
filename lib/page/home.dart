@@ -70,7 +70,33 @@ class _HomePageState extends State<HomePage> {
           //       )
           //   ],
           // ),
-          
+          body: const Column(
+            children: [
+              SizedBox(
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage(Assets.pfp),
+                  ),
+                  title: Text(
+                  'Welcome back!',
+                  style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromRGBO(57, 55, 96, 1)
+                              ),
+                  ),
+                  subtitle: Text(
+                        "Adewale Psalmzy",
+                        style: TextStyle(
+                          color: Color.fromRGBO(26, 28, 30, 1),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w800,
+                        )
+                    )
+                ),
+              )
+            ],
+          ),
           bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
               iconTheme: const IconThemeData(color: Colors.grey)
