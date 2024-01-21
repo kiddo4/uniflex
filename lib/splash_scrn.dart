@@ -21,12 +21,16 @@ class _SplashScrState extends State<SplashScr> {
   }
 
 void navigate() async { 
-    Future.delayed(const Duration(seconds: 4));
-    
-    Navigator.pushReplacement(
+    Future.delayed(const Duration(seconds: 5),
+    () {
+      Navigator.pushReplacement(
             context,
             CupertinoPageRoute(builder: (_) => const OnboardView()),
           );
+    }
+    );
+    
+    
     }
   @override
   Widget build(BuildContext context) {
@@ -34,11 +38,16 @@ void navigate() async {
       backgroundColor: const Color.fromRGBO(72, 67, 210, 1),
       body: Center(
         child: SizedBox(
-          height: 87,
-          width: 83,
+          // height: 87,
+          // width: 83,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(Assets.logo),
+              Image.asset(
+                Assets.logo,
+                height: 70,
+              ),
+            //  const SizedBox(height: 40),
               const Text(
                   "Uni Flex",
                   style: TextStyle(
