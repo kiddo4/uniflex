@@ -2,7 +2,9 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:uniflex/model/savings.dart';
 import 'package:uniflex/ui/assets.dart';
+import 'package:uniflex/widget/savings_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -102,10 +104,10 @@ class _HomePageState extends State<HomePage> {
 
               ),
               const SizedBox(height: 20,),
-              const SizedBox(
+              SizedBox(
                 child: Column(
                   children: [
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
@@ -122,7 +124,14 @@ class _HomePageState extends State<HomePage> {
                       )
                       ],
                     ),
-                    SizedBox(height: 10,)
+                    const SizedBox(height: 10,),
+                    ListView.builder(
+                      itemCount: savings.length,
+                      itemBuilder: (context, index){
+                        return SavingsCard(
+                          savings: savings[index],
+                        );}
+                      )
                   ],
                 ),
               )
@@ -144,4 +153,6 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+  
 }
+
