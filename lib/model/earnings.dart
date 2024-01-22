@@ -27,7 +27,7 @@ Color blendedColor3 = Color.fromRGBO(
 );
 
 List<Earnings> earnings = [
-  Earnings(text: 'Monday', amount: '30.00', bgColor: blendedColor),
-  Earnings(text: 'Tuesday', amount: '20.00', bgColor: blendedColor1),
-  Earnings(text: 'Wednesday', amount: '10.00', bgColor: blendedColor3)
+  Earnings(text: 'Monday', amount: '30.00', bgColor: Color(0xFFDFEAFC)),
+  Earnings(text: 'Tuesday', amount: '20.00', bgColor: Color(0xFFE6E8E9)),
+  Earnings(text: 'Wednesday', amount: '10.00', bgColor: Color(0xFFF5E9E8))
 ];
