@@ -7,5 +7,5 @@ class Assets {
   static const String message = 'assets/message-text.png';
   static const String breifcase = 'assets/briefcase.png';
 
-  static const String notification = 'assets/notification.png';
+  static const String notification = 'assets/3.svg';
 }

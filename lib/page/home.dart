@@ -2,8 +2,10 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:uniflex/model/earnings.dart';
 import 'package:uniflex/model/savings.dart';
 import 'package:uniflex/ui/assets.dart';
+import 'package:uniflex/widget/earnings_card.dart';
 import 'package:uniflex/widget/savings_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,10 +27,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: SafeArea(
-        top: false,
+    return  SafeArea(
+        // top: false,
         child: Scaffold(
           extendBody: true,
           // appBar: AppBar(
@@ -74,6 +74,8 @@ class _HomePageState extends State<HomePage> {
           //   ],
           // ),
           body: Column(
+            
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
                 child: ListTile(
@@ -104,10 +106,9 @@ class _HomePageState extends State<HomePage> {
 
               ),
               const SizedBox(height: 20,),
-              SizedBox(
-                child: Column(
-                  children: [
-                    const Row(
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
@@ -124,17 +125,84 @@ class _HomePageState extends State<HomePage> {
                       )
                       ],
                     ),
-                    const SizedBox(height: 10,),
+                    
+              ),
+              const SizedBox(height: 10,),
+              SizedBox(
+                width: double.infinity,
+                height: 135,
+                child:
                     ListView.builder(
+                      physics: const BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
                       itemCount: savings.length,
                       itemBuilder: (context, index){
                         return SavingsCard(
-                          savings: savings[index],
+                          text: savings[index].text,
+                          amount: savings[index].amount,
                         );}
                       )
-                  ],
-                ),
-              )
+                 
+              ),
+              const Align(
+                alignment: Alignment.topLeft,
+                child: Row(
+                      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                        "My Earnings",
+                        style: TextStyle(
+                          color: Color.fromRGBO(26, 28, 30, 1),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w800,
+                        )
+                    ),
+                    Icon(
+                      Icons.arrow_forward_sharp,
+                      color: Color.fromRGBO(26, 28, 30,1)
+                      )
+                      ],
+                    ),
+                    
+              ),
+              const SizedBox(height: 20,),
+              SizedBox(
+                width: double.infinity,
+                height: 135,
+                child: 
+                    ListView.builder(
+                      physics: const BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      itemCount: earnings.length,
+                      itemBuilder: (context, index){
+                        return EarningsCard(
+                          earnings: earnings[index],
+                        );}
+                      )
+                  
+              ),
+              const SizedBox(height: 20,),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                        "My Savings Plans",
+                        style: TextStyle(
+                          color: Color.fromRGBO(26, 28, 30, 1),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w800,
+                        )
+                    ),
+                    Icon(
+                      Icons.arrow_forward_sharp,
+                      color: Color.fromRGBO(26, 28, 30,1)
+                      )
+                      ],
+                    ),
+                    
+              ),
             ],
           ),
           bottomNavigationBar: Theme(
@@ -150,8 +218,8 @@ class _HomePageState extends State<HomePage> {
               ),
           ),
         ),
-      ),
-    );
+      )
+   ;
   }
   
 }
