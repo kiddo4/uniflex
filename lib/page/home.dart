@@ -24,17 +24,27 @@ class _HomePageState extends State<HomePage> {
               height: 25,
               ),
       label: 'Home',
+      labelStyle: const TextStyle(
+        color: Color.fromRGBO(2, 41, 100, 0.3)
+      )
       ),
+      
     CurvedNavigationBarItem(
       child: Image.asset(
               Assets.breifcase,
               height: 25,
               ),
       label: 'Jobs',
+      labelStyle: const TextStyle(
+        color: Color.fromRGBO(2, 41, 100, 0.3)
+      )
       ),
-    CurvedNavigationBarItem(
+    const CurvedNavigationBarItem(
       child: Icon(Icons.add, size: 30,),
-      label: ''
+      label: '',
+      labelStyle: TextStyle(
+        color: Color.fromRGBO(2, 41, 100, 0.3)
+      )
       ),
    CurvedNavigationBarItem(
       child: Image.asset(
@@ -42,13 +52,19 @@ class _HomePageState extends State<HomePage> {
               height: 25,
               ),
       label: 'Messages',
+      labelStyle: const TextStyle(
+        color: Color.fromRGBO(2, 41, 100, 0.3)
+      )
       ),
     CurvedNavigationBarItem(
       child: Image.asset(
-              Assets.home,
+              Assets.profile,
               height: 25,
               ),
-      label: 'Home',
+      label: 'Profile',
+      labelStyle: const TextStyle(
+        color: Color.fromRGBO(2, 41, 100, 0.3)
+      )
       ),
   ];
   final int index = 2;

@@ -13,4 +13,5 @@ class Assets {
   static const String recieve = 'assets/Icon-2.png';
   static const String withdraw = 'assets/Icon-3.png';
   static const String more = 'assets/Icon.png';
+  static const String profile = 'assets/profile.png';
 }
