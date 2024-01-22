@@ -8,4 +8,9 @@ class Assets {
   static const String breifcase = 'assets/briefcase.png';
 
   static const String notification = 'assets/3.svg';
+  static const String arrow = 'assets/arrow-right.png';
+  static const String bill = 'assets/Icon-1.png';
+  static const String recieve = 'assets/Icon-2.png';
+  static const String withdraw = 'assets/Icon-3.png';
+  static const String more = 'assets/Icon.png';
 }

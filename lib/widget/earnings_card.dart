@@ -9,7 +9,7 @@ class EarningsCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 40,
+        height: 0,
             width: 152,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),

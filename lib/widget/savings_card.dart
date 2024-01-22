@@ -19,68 +19,49 @@ class SavingsCard extends StatelessWidget {
         child: Column(
           
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                          text,
-                          style: const TextStyle(
-                            color: Color.fromRGBO(26, 28, 30, 1),
-                              fontSize: 18,
-                              fontWeight: FontWeight.w800,
-                          )
-                      ),
-    
-                    Text(
-                    '$amount',
-                    style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(57, 55, 96, 1)
-                                ),
-                    ),
-                  ],
-                ),
-                 const Icon(
-                        Icons.arrow_forward_ios_rounded,
-                        color: Color.fromRGBO(26, 28, 30,1)
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                            text,
+                            style: const TextStyle(
+                              color: Color.fromRGBO(26, 28, 30, 1),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                            )
                         ),
-              ],
-             
+                        const SizedBox(height: 10,),
+                      Text(
+                      '$amount',
+                      style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromRGBO(57, 55, 96, 1)
+                                  ),
+                      ),
+                    ],
+                  ),
+                   const Icon(
+                          Icons.arrow_forward_ios_rounded,
+                          color: Colors.grey
+                          ),
+                ],
+               
+              ),
             ),
-            // ListTile(
-            //   leading: SizedBox(height: 20,),
-            //         title: Text(
-            //               text,
-            //               style: const TextStyle(
-            //                 color: Color.fromRGBO(26, 28, 30, 1),
-            //                   fontSize: 18,
-            //                   fontWeight: FontWeight.w800,
-            //               )
-            //           ),
-                    
-            //         subtitle: Text(
-            //         '$amount',
-            //         style: const TextStyle(
-            //                 fontSize: 14,
-            //                 fontWeight: FontWeight.w400,
-            //                 color: Color.fromRGBO(57, 55, 96, 1)
-            //                     ),
-            //         ),
-            //         trailing: const Icon(
-            //             Icons.arrow_forward_ios_rounded,
-            //             color: Color.fromRGBO(26, 28, 30,1)
-            //             ),
-            //       ),
-                  // const LinearProgressIndicator(
-                  //   value: 0.7,
-                  //   color: Color.fromRGBO(72, 67, 210, 1),
-                  //   backgroundColor: Colors.grey,
-                  //   minHeight: 120,
-                  // )
+            const SizedBox(height: 30,),
+                  LinearProgressIndicator(
+                    value: 0.6,
+                    color: Color.fromRGBO(72, 67, 210, 1),
+                    backgroundColor: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(15),
+                    minHeight: 10,
+                  )
           ],
         ),
       ),
