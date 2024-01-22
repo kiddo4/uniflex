@@ -35,7 +35,7 @@ class SavingsCard extends StatelessWidget {
                       ),
     
                     Text(
-                    '$amount',
+                    '€$amount',
                     style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
