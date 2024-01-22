@@ -14,7 +14,7 @@ class EarningsCard extends StatelessWidget {
             width: 152,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: Colors.pinkAccent,
+              color: earnings.bgColor,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
