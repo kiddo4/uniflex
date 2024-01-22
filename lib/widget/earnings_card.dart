@@ -6,6 +6,7 @@ class EarningsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String amount = earnings.amount;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -29,7 +30,7 @@ class EarningsCard extends StatelessWidget {
                     textAlign: TextAlign.center,
                       ),
                 Text(
-                    earnings.amount,
+                    '€$amount',
                     style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,

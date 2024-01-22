@@ -1,4 +1,5 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,11 +18,38 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final items = [
-    const Icon(Icons.home_filled, size: 30,),
-    const Icon(Icons.work, size: 30,),
-    const Icon(Icons.add, size: 30,),
-    const Icon(Icons.message_rounded, size: 30,),
-    const Icon(Icons.contact_page, size: 30,),
+    CurvedNavigationBarItem(
+      child: Image.asset(
+              Assets.home,
+              height: 25,
+              ),
+      label: 'Home',
+      ),
+    CurvedNavigationBarItem(
+      child: Image.asset(
+              Assets.breifcase,
+              height: 25,
+              ),
+      label: 'Jobs',
+      ),
+    CurvedNavigationBarItem(
+      child: Icon(Icons.add, size: 30,),
+      label: ''
+      ),
+   CurvedNavigationBarItem(
+      child: Image.asset(
+              Assets.message,
+              height: 25,
+              ),
+      label: 'Messages',
+      ),
+    CurvedNavigationBarItem(
+      child: Image.asset(
+              Assets.home,
+              height: 25,
+              ),
+      label: 'Home',
+      ),
   ];
   final int index = 2;
 
@@ -77,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                     height: 200,
                     decoration: BoxDecoration(
                     gradient: 
-                    LinearGradient(
+                    const LinearGradient(
                           colors: [Color.fromRGBO(57, 55, 96, 1), Color.fromRGBO(72, 67, 210, 1)],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomCenter,
@@ -85,6 +113,114 @@ class _HomePageState extends State<HomePage> {
                         ),
                     borderRadius: BorderRadius.circular(15)
                       ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Text(
+                            'Total Savings',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w200,
+                              color: Colors.white,
+                                  ),
+                            
+                        ),
+                const SizedBox(height: 5),
+                      const Text(
+                      '€12,293.28',
+                      style: TextStyle(
+                              color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                            )
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height:55,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(12)
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(6.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      Assets.withdraw,
+                                      height: 25,
+                                      ),
+                                    const Text(
+                                      'withdraw',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                      )
+                                  ],
+                                ),
+                                 Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      Assets.recieve,
+                                      height: 25,
+                                      ),
+                                    const Text(
+                                      'Recieve',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                      )
+                                  ],
+                                ),
+                                 Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      Assets.bill,
+                                      height: 25,
+                                      ),
+                                    const Text(
+                                      'Pay bills',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                      ),
+
+                                  ],
+                                ),
+                                 Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      Assets.more,
+                                      height: 25,
+                                      ),
+                                    const Text(
+                                      'more',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                      )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                      ],
+                    )
                   ),
                 ),
                 const SizedBox(height: 20,),
